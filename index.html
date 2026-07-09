@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busy Bee's Planner</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <style>
@@ -386,6 +387,71 @@
             border-radius: 5px;
             display: none;
             z-index: 100;
+        }
+
+        /* --- TABLET (2 columns) --- */
+        @media (max-width: 1024px) {
+            .calendar-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .day-card {
+                height: 35vh;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* --- PHONE --- */
+        @media (max-width: 600px) {
+            .calendar-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .day-card {
+                height: 30vh;
+            }
+
+            .header-row {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 15px;
+            }
+
+            .side-deco {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 16px;
+                letter-spacing: -1px;
+            }
+
+            .encouragement {
+                font-size: 11px;
+            }
+
+            .main-container {
+                padding: 10px;
+            }
+
+            .dish-header {
+                font-size: 12px;
+            }
+
+            .footer-links {
+                left: 10px;
+                right: 10px;
+                justify-content: center;
+            }
+
+            .footer-links a {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
